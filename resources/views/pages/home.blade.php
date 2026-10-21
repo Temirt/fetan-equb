@@ -32,9 +32,10 @@
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <button data-open-equb-modal class="w-full sm:w-auto px-8 py-4 rounded-xl font-extrabold text-base text-emerald-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 shadow-xl shadow-amber-500/25 hover:shadow-amber-400/40 hover:scale-105 active:scale-95 transition-all">
-                {{ __('messages.hero.cta_primary') }}
-            </button>
+            <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-extrabold text-base text-emerald-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 shadow-xl shadow-amber-500/25 hover:shadow-amber-400/40 hover:scale-105 active:scale-95 transition-all">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
+                <span>{{ __('messages.hero.cta_primary') }}</span>
+            </a>
             <a href="#how-it-works" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-base text-white bg-emerald-950/70 border border-emerald-600/50 hover:bg-emerald-900/60 hover:border-amber-400/60 shadow-lg transition-all backdrop-blur-md">
                 {{ __('messages.hero.cta_secondary') }}
             </a>
@@ -273,10 +274,11 @@
         </div>
 
         <div class="mt-14 text-center">
-            <button data-open-equb-modal class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-extrabold text-base text-emerald-950 bg-amber-400 hover:bg-amber-300 shadow-xl transition-all">
+            <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-extrabold text-base text-emerald-950 bg-amber-400 hover:bg-amber-300 shadow-xl transition-all">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
                 <span>{{ __('messages.hero.cta_primary') }}</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
         </div>
     </div>
 </section>
@@ -352,9 +354,10 @@
                         </div>
                     </div>
 
-                    <button data-open-equb-modal class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 text-emerald-950 font-extrabold text-sm shadow-xl shadow-amber-400/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
-                        {{ __('messages.calculator.simulate_btn') }}
-                    </button>
+                    <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 text-emerald-950 font-extrabold text-sm shadow-xl shadow-amber-400/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
+                        <span>{{ __('messages.calculator.simulate_btn') }} (In App)</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -473,9 +476,9 @@
                     <a href="{{ route('platinum') }}" class="px-8 py-4 rounded-xl font-extrabold text-base text-emerald-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 shadow-xl shadow-amber-400/25 hover:scale-105 active:scale-95 transition-all">
                         {{ __('messages.platinum.button') }}
                     </a>
-                    <button data-open-equb-modal class="px-6 py-4 rounded-xl font-bold text-base text-amber-300 border border-amber-400/60 hover:bg-amber-400/10 transition-colors">
-                        Apply for VIP Platinum
-                    </button>
+                    <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="px-6 py-4 rounded-xl font-bold text-base text-amber-300 border border-amber-400/60 hover:bg-amber-400/10 transition-colors">
+                        Download App for VIP
+                    </a>
                 </div>
             </div>
         </div>
@@ -536,16 +539,12 @@
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold text-base text-emerald-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 shadow-xl shadow-amber-500/25 hover:scale-105 active:scale-95 transition-all">
+            <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 rounded-xl font-extrabold text-base text-emerald-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 shadow-xl shadow-amber-500/25 hover:scale-105 active:scale-95 transition-all">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/>
                 </svg>
                 <span>{{ __('messages.cta.btn_google_play') }}</span>
             </a>
-            <button data-open-equb-modal class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base text-white bg-emerald-950/80 border border-emerald-600/70 hover:bg-emerald-900/80 hover:border-amber-400 transition-all shadow-lg">
-                <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/></svg>
-                <span>{{ __('messages.cta.btn_web') }}</span>
-            </button>
         </div>
 
         <div class="mt-8 text-xs text-emerald-400/80">

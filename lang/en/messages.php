@@ -11,8 +11,8 @@ return [
         'platinum' => 'Platinum',
         'faq' => 'FAQ',
         'contact' => 'Contact Us',
-        'start_equb' => 'Start Your Equb Today',
-        'web_equb' => 'Create on Web',
+        'start_equb' => 'Download the App',
+        'get_app' => 'Get the App',
     ],
     'hero' => [
         'badge' => 'Patent Protected No. ET UM 1170B1 • INSA Certified • NBE Cleared',
@@ -124,7 +124,6 @@ return [
         'headline' => 'Financial Access Should Not Be a Lottery. It Should Be a Guarantee.',
         'body' => 'Stop waiting for a circle. Start your open line today and take control of your financial future.',
         'btn_google_play' => 'Download on Google Play',
-        'btn_web' => 'Create Your Equb on the Web',
     ],
     'footer' => [
         'company_name' => 'Dolce Technologies One Member PLC',

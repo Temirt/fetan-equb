@@ -103,17 +103,18 @@
 
                 <!-- Action Button & Language Switcher -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <button data-open-equb-modal class="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm text-emerald-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 shadow-lg shadow-amber-500/20 hover:shadow-amber-400/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                    <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-emerald-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 shadow-lg shadow-amber-500/20 hover:shadow-amber-400/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
                         <span>{{ __('messages.nav.start_equb') }}</span>
-                        <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden flex items-center gap-2">
-                    <button data-open-equb-modal class="px-3 py-1.5 rounded-lg text-xs font-bold text-emerald-950 bg-amber-400">
-                        {{ __('messages.nav.start_equb') }}
-                    </button>
+                    <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="px-3 py-1.5 rounded-lg text-xs font-bold text-emerald-950 bg-amber-400 flex items-center gap-1">
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
+                        <span>{{ __('messages.nav.start_equb') }}</span>
+                    </a>
                     <button id="mobileMenuToggle" class="p-2 rounded-lg bg-emerald-900/60 text-emerald-200 hover:text-white hover:bg-emerald-800/80 transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                     </button>
@@ -143,121 +144,6 @@
     <main class="flex-grow">
         @yield('content')
     </main>
-
-    <!-- Interactive Registration / Join Modal -->
-    <div id="equbModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4">
-        <div class="relative w-full max-w-lg rounded-2xl bg-gradient-to-b from-[#06331e] to-[#02180d] border border-amber-400/40 p-6 sm:p-8 shadow-2xl shadow-emerald-950/80">
-            <!-- Close button -->
-            <button id="closeModalBtn" class="absolute top-4 right-4 text-emerald-300 hover:text-white p-1 rounded-lg hover:bg-emerald-800/50 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </button>
-
-            <!-- Form State -->
-            <form id="modalEqubForm" class="space-y-4">
-                <div class="mb-5">
-                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-400/10 text-amber-400 text-xs font-bold border border-amber-400/30 mb-2">
-                        <span>✨</span> {{ __('messages.modal.start_title') }}
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-extrabold text-white">{{ __('messages.hero.cta_primary') }}</h3>
-                    <p class="text-xs text-emerald-300/80 mt-1">{{ __('messages.modal.start_subtitle') }}</p>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold text-emerald-200 mb-1">{{ __('messages.modal.full_name') }}</label>
-                    <input type="text" name="name" required placeholder="Abebe Bikila" class="w-full px-4 py-2.5 rounded-xl bg-emerald-950/70 border border-emerald-700/60 text-white placeholder-emerald-600 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 text-sm">
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold text-emerald-200 mb-1">{{ __('messages.modal.phone') }}</label>
-                    <input type="tel" name="phone" required placeholder="0911287374" class="w-full px-4 py-2.5 rounded-xl bg-emerald-950/70 border border-emerald-700/60 text-white placeholder-emerald-600 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 text-sm">
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-bold text-emerald-200 mb-1">{{ __('messages.modal.goal_type') }}</label>
-                        <select name="goal" class="w-full px-3 py-2.5 rounded-xl bg-emerald-950/70 border border-emerald-700/60 text-white focus:outline-none focus:border-amber-400 text-sm">
-                            <option value="Car">🚗 Car / መኪና (1.5M ETB)</option>
-                            <option value="Motorcycle">🏍️ Motorcycle / ሞተር (250K ETB)</option>
-                            <option value="Business">💼 Business / ንግድ (500K ETB)</option>
-                            <option value="Home">🏠 Furnished Home / ቤት (3M ETB)</option>
-                            <option value="Custom">💰 Custom Savings / ብጁ ቁጠባ</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-emerald-200 mb-1">{{ __('messages.modal.daily_saving') }}</label>
-                        <input type="number" name="daily_amount" required min="20" step="10" value="250" class="w-full px-4 py-2.5 rounded-xl bg-emerald-950/70 border border-emerald-700/60 text-white focus:outline-none focus:border-amber-400 text-sm">
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold text-emerald-200 mb-1">{{ __('messages.modal.payment_method') }}</label>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                        <label class="cursor-pointer border border-emerald-800 rounded-xl p-2.5 bg-emerald-950/40 text-center hover:border-amber-400 flex flex-col items-center justify-center transition-all">
-                            <input type="radio" name="payment_method" value="Telebirr" checked class="sr-only">
-                            <span class="text-xs font-bold text-amber-300">Telebirr</span>
-                            <span class="text-[9px] text-emerald-400">ቴሌብር</span>
-                        </label>
-                        <label class="cursor-pointer border border-emerald-800 rounded-xl p-2.5 bg-emerald-950/40 text-center hover:border-amber-400 flex flex-col items-center justify-center transition-all">
-                            <input type="radio" name="payment_method" value="CBE Birr" class="sr-only">
-                            <span class="text-xs font-bold text-white">CBE Birr</span>
-                            <span class="text-[9px] text-emerald-400">ሲቢኢ ብር</span>
-                        </label>
-                        <label class="cursor-pointer border border-emerald-800 rounded-xl p-2.5 bg-emerald-950/40 text-center hover:border-amber-400 flex flex-col items-center justify-center transition-all">
-                            <input type="radio" name="payment_method" value="M-PESA" class="sr-only">
-                            <span class="text-xs font-bold text-red-400">M-PESA</span>
-                            <span class="text-[9px] text-emerald-400">ሳፋሪኮም</span>
-                        </label>
-                        <label class="cursor-pointer border border-emerald-800 rounded-xl p-2.5 bg-emerald-950/40 text-center hover:border-amber-400 flex flex-col items-center justify-center transition-all">
-                            <input type="radio" name="payment_method" value="Chapa" class="sr-only">
-                            <span class="text-xs font-bold text-green-400">Chapa</span>
-                            <span class="text-[9px] text-emerald-400">ቻፓ</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="pt-2">
-                    <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 text-emerald-950 font-extrabold text-sm shadow-xl shadow-amber-400/20 hover:scale-[1.01] active:scale-[0.99] transition-all">
-                        {{ __('messages.modal.submit') }}
-                    </button>
-                    <p class="text-[10px] text-center text-emerald-400/70 mt-2">
-                        🔒 Funds kept in partner bank segregated custodial escrow. Patent No. ET UM 1170B1.
-                    </p>
-                </div>
-            </form>
-
-            <!-- Success State -->
-            <div id="modalSuccessState" class="hidden text-center py-6 space-y-4">
-                <div class="w-16 h-16 mx-auto rounded-full bg-emerald-500/20 border-2 border-emerald-400 flex items-center justify-center text-emerald-300">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <h4 class="text-2xl font-extrabold text-white">{{ __('messages.modal.success_title') }}</h4>
-                <p class="text-sm text-emerald-200/90 max-w-sm mx-auto">{{ __('messages.modal.success_desc') }}</p>
-
-                <div class="bg-emerald-950/80 border border-emerald-700/60 rounded-xl p-4 text-left max-w-xs mx-auto space-y-2 text-xs">
-                    <div class="flex justify-between">
-                        <span class="text-emerald-400">Open-Line Ticket:</span>
-                        <span id="resLineNumber" class="font-mono font-bold text-amber-300">ET-EQB-849201</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-emerald-400">Estimated Payout:</span>
-                        <span id="resPayoutDate" class="font-bold text-white">Jul 18, 2026</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-emerald-400">Consistency Multiplier:</span>
-                        <span class="font-bold text-emerald-300">100% Active</span>
-                    </div>
-                </div>
-
-                <div class="pt-2">
-                    <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-400 text-emerald-950 font-bold text-sm hover:bg-amber-300 transition-colors shadow-lg">
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
-                        <span>{{ __('messages.cta.btn_google_play') }}</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Official Footer -->
     <footer class="bg-[#011208] border-t border-emerald-900/60 pt-16 pb-12 text-slate-300">
@@ -332,14 +218,11 @@
                             <span class="p-2 rounded-lg bg-emerald-950 border border-emerald-800 text-amber-300">📧</span>
                             <span>{{ __('messages.footer.email') }}</span>
                         </a>
-                        <div class="pt-2 space-y-2">
+                        <div class="pt-2">
                             <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="w-full py-2.5 px-3 rounded-lg bg-emerald-950 hover:bg-emerald-900 border border-amber-400/50 flex items-center justify-center gap-2 text-xs font-bold text-amber-300 transition-colors shadow">
                                 <svg class="w-4 h-4 fill-current text-amber-400" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
                                 <span>Get on Google Play</span>
                             </a>
-                            <button data-open-equb-modal class="w-full py-2 px-3 rounded-lg bg-emerald-900/80 hover:bg-emerald-800 border border-emerald-700/60 text-xs font-bold text-white transition-colors">
-                                {{ __('messages.cta.btn_web') }}
-                            </button>
                         </div>
                     </div>
                 </div>

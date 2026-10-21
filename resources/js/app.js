@@ -4,7 +4,6 @@ import './bootstrap';
 document.addEventListener('DOMContentLoaded', () => {
     initHeroLineCanvas();
     initEqubCalculator();
-    initModal();
     initFaqAccordion();
     initMobileMenu();
 });
@@ -149,85 +148,6 @@ function initEqubCalculator() {
     dailySlider.addEventListener('input', updateCalculator);
 
     updateCalculator();
-}
-
-function initModal() {
-    const openBtns = document.querySelectorAll('[data-open-equb-modal]');
-    const modal = document.getElementById('equbModal');
-    const closeBtn = document.getElementById('closeModalBtn');
-    const modalForm = document.getElementById('modalEqubForm');
-    const modalSuccess = document.getElementById('modalSuccessState');
-
-    if (!modal) return;
-
-    openBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    const closeModal = () => {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.body.style.overflow = '';
-        if (modalForm && modalSuccess) {
-            modalForm.classList.remove('hidden');
-            modalSuccess.classList.add('hidden');
-            modalForm.reset();
-        }
-    };
-
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-    });
-
-    if (modalForm) {
-        modalForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const submitBtn = modalForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = `
-                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-emerald-950 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" stroke-width="4" d="M4 12a8 8 0 018-8v8H4z"></path>
-                </svg>
-                Processing...
-            `;
-
-            const formData = new FormData(modalForm);
-            try {
-                const response = await fetch('/api/register-equb', {
-                    method: 'POST',
-                    headers: {
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                        'Accept': 'application/json',
-                    },
-                    body: formData,
-                });
-
-                const data = await response.json();
-                if (data.success) {
-                    modalForm.classList.add('hidden');
-                    modalSuccess.classList.remove('hidden');
-                    const resLine = document.getElementById('resLineNumber');
-                    const resPayout = document.getElementById('resPayoutDate');
-                    if (resLine) resLine.textContent = data.data.line_number;
-                    if (resPayout) resPayout.textContent = data.data.payout_projection;
-                }
-            } catch (err) {
-                console.error(err);
-                alert('Connection error. Please try again.');
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-            }
-        });
-    }
 }
 
 function initFaqAccordion() {

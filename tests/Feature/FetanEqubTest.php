@@ -14,6 +14,8 @@ class FetanEqubTest extends TestCase
         $response->assertSee('EQUB');
         $response->assertSee('ET UM 1170B1');
         $response->assertSee('Dolce Technologies One Member PLC');
+        $response->assertSee('com.dolcetechnologies.fetanequb');
+        $response->assertDontSee('Create Your Equb on the Web');
     }
 
     public function test_amharic_locale_rendering(): void

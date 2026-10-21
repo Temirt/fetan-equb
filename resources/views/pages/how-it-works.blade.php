@@ -110,9 +110,10 @@
             <p class="text-emerald-200/90 max-w-2xl mx-auto text-sm sm:text-base mb-8 leading-relaxed">
                 {{ app()->getLocale() === 'am' ? 'የፈጣን እቁብ ክፍት መስመር አልጎሪዝም በኢትዮጵያ ብቻ ሳይሆን በአለም አቀፍ ደረጃ በሂሳባዊ መረጋጋቱ የተረጋገጠ አዲስ የፋይናንስ ፈጠራ ነው።' : 'By combining continuous liquidity injection with non-stochastic queue progression, Fetan Equb is mathematically proven to support over 1,000,000 active savers concurrently.' }}
             </p>
-            <button data-open-equb-modal class="px-8 py-4 rounded-xl font-extrabold text-emerald-950 bg-amber-400 hover:bg-amber-300 shadow-xl transition-all">
-                {{ __('messages.hero.cta_primary') }}
-            </button>
+            <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-extrabold text-emerald-950 bg-amber-400 hover:bg-amber-300 shadow-xl transition-all">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
+                <span>{{ __('messages.hero.cta_primary') }}</span>
+            </a>
         </div>
     </div>
 </section>
