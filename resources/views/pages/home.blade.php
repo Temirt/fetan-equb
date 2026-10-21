@@ -395,13 +395,17 @@
                 <p class="text-sm text-slate-300 leading-relaxed">{{ __('messages.trust.item2_desc') }}</p>
             </div>
 
-            <!-- Trust 3 -->
-            <div class="glow-card p-6 rounded-2xl">
+            <!-- Trust 3 (Google Play App) -->
+            <div class="glow-card p-6 rounded-2xl border border-amber-400/40 relative">
                 <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/40 text-amber-300 flex items-center justify-center text-2xl mb-4">
                     📱
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2">{{ __('messages.trust.item3_title') }}</h3>
-                <p class="text-sm text-slate-300 leading-relaxed">{{ __('messages.trust.item3_desc') }}</p>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">{{ __('messages.trust.item3_desc') }}</p>
+                <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 hover:text-white transition-colors">
+                    <span>View on Google Play Store</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
             </div>
 
             <!-- Trust 4 -->
@@ -532,7 +536,7 @@
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://play.google.com/store" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold text-base text-emerald-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 shadow-xl shadow-amber-500/25 hover:scale-105 active:scale-95 transition-all">
+            <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold text-base text-emerald-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 shadow-xl shadow-amber-500/25 hover:scale-105 active:scale-95 transition-all">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/>
                 </svg>

@@ -25,10 +25,17 @@
     <div class="bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950 border-b border-emerald-800/40 py-2 px-4 text-xs font-medium text-emerald-200">
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
             <div class="flex items-center gap-2">
-                <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-400/20 text-amber-300 border border-amber-400/30">
-                    ETHIOPIAN PATENT
-                </span>
-                <span>Patent No. ET UM 1170B1 • INSA Certified • NBE Cleared • DUNS: 764070770</span>
+                <div class="flex items-center gap-2">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-400/20 text-amber-300 border border-amber-400/30">
+                        ETHIOPIAN PATENT
+                    </span>
+                    <span>Patent No. ET UM 1170B1 • INSA Certified • NBE Cleared</span>
+                    <span class="text-emerald-700">|</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="text-amber-300 hover:text-white flex items-center gap-1 font-bold">
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
+                        <span>Google Play App</span>
+                    </a>
+                </div>
             </div>
             <div class="flex items-center gap-4">
                 <a href="tel:+251911287374" class="hover:text-amber-300 transition-colors flex items-center gap-1">
@@ -242,7 +249,8 @@
                 </div>
 
                 <div class="pt-2">
-                    <a href="https://play.google.com/store" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-400 text-emerald-950 font-bold text-sm hover:bg-amber-300 transition-colors">
+                    <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-400 text-emerald-950 font-bold text-sm hover:bg-amber-300 transition-colors shadow-lg">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
                         <span>{{ __('messages.cta.btn_google_play') }}</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
@@ -324,8 +332,12 @@
                             <span class="p-2 rounded-lg bg-emerald-950 border border-emerald-800 text-amber-300">📧</span>
                             <span>{{ __('messages.footer.email') }}</span>
                         </a>
-                        <div class="pt-2">
-                            <button data-open-equb-modal class="w-full py-2 px-3 rounded-lg bg-emerald-900/80 hover:bg-emerald-800 border border-emerald-700/60 text-xs font-bold text-amber-300 transition-colors">
+                        <div class="pt-2 space-y-2">
+                            <a href="https://play.google.com/store/apps/details?id=com.dolcetechnologies.fetanequb" target="_blank" class="w-full py-2.5 px-3 rounded-lg bg-emerald-950 hover:bg-emerald-900 border border-amber-400/50 flex items-center justify-center gap-2 text-xs font-bold text-amber-300 transition-colors shadow">
+                                <svg class="w-4 h-4 fill-current text-amber-400" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.006 2.006 0 0 1-.61-1.464V3.278c0-.573.226-1.1.61-1.464zm11.242 11.244l2.42 2.42-12.78 7.379 10.36-9.799zm2.42-2.116l3.35 1.934c.82.474.82 1.242 0 1.716l-3.35 1.934-2.203-2.203 2.203-3.381zm-2.42-2.116L4.491.963 17.27 8.342l-2.42 2.42z"/></svg>
+                                <span>Get on Google Play</span>
+                            </a>
+                            <button data-open-equb-modal class="w-full py-2 px-3 rounded-lg bg-emerald-900/80 hover:bg-emerald-800 border border-emerald-700/60 text-xs font-bold text-white transition-colors">
                                 {{ __('messages.cta.btn_web') }}
                             </button>
                         </div>
