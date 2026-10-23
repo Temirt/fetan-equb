@@ -90,6 +90,22 @@
                         Active
                     </span>
                 </div>
+
+                <!-- Admin Desk Quick Access Card -->
+                <div class="card-premium rounded-2xl p-6 text-xs text-[#444B48] bg-[#F7F9F8] border border-[#20BF78]/30 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-1.5 font-bold text-[#111111] text-sm mb-1">
+                            <span>🔐</span> Staff Admin Operations Console
+                        </div>
+                        <p class="text-xs text-[#444B48]">
+                            Staff member? Sign in to review and respond to inquiries & user feedback in real time.
+                        </p>
+                    </div>
+                    <a href="{{ route('admin.dashboard') }}" class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#111111] hover:bg-[#20BF78] text-white font-bold text-xs transition-colors shrink-0">
+                        <span>Open Admin Desk</span>
+                        <span>→</span>
+                    </a>
+                </div>
             </div>
 
             <!-- Interactive Message & Feedback Form -->

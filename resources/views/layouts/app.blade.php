@@ -36,6 +36,12 @@
                 </a>
             </div>
             <div class="flex items-center gap-4">
+                <!-- Admin Portal Quick Link in Top Strip -->
+                <a href="{{ route('admin.dashboard') }}" class="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#111111] hover:text-[#15965C] px-2.5 py-0.5 rounded-full bg-white border border-[#E5EAE7] shadow-xs hover:border-[#20BF78] transition-all">
+                    <span>🔐</span>
+                    <span>Admin Portal</span>
+                </a>
+                <span class="text-[#E5EAE7] hidden sm:inline">|</span>
                 <a href="tel:+251911287374" class="hover:text-[#20BF78] transition-colors flex items-center gap-1.5 text-[#444B48]">
                     <svg class="w-3.5 h-3.5 text-[#20BF78]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     <span>+251911287374</span>
@@ -88,6 +94,10 @@
                     <a href="{{ route('contact') }}" class="text-sm font-semibold transition-colors {{ request()->routeIs('contact') ? 'text-[#20BF78] font-bold' : 'text-[#111111] hover:text-[#20BF78]' }}">
                         Contact
                     </a>
+                    <a href="{{ route('admin.dashboard') }}" class="text-xs font-bold transition-all flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#E5EAE7] bg-[#F7F9F8] text-[#111111] hover:border-[#20BF78] hover:bg-[#EAFBF2] hover:text-[#15965C] shadow-2xs">
+                        <span>🔐</span>
+                        <span>Admin Portal</span>
+                    </a>
                 </nav>
 
                 <!-- Primary CTA Button -->
@@ -118,6 +128,13 @@
             <a href="{{ route('platinum') }}" class="block px-3 py-2 rounded-lg text-base font-semibold {{ request()->routeIs('platinum') ? 'bg-[#EAFBF2] text-[#15965C]' : 'text-[#111111] hover:bg-[#F7F9F8]' }}">Platinum (VIP)</a>
             <a href="{{ route('home') }}#trust-security" class="block px-3 py-2 rounded-lg text-base font-semibold text-[#111111] hover:bg-[#F7F9F8]">Trust & Security</a>
             <a href="{{ route('contact') }}" class="block px-3 py-2 rounded-lg text-base font-semibold {{ request()->routeIs('contact') ? 'bg-[#EAFBF2] text-[#15965C]' : 'text-[#111111] hover:bg-[#F7F9F8]' }}">Contact</a>
+            <a href="{{ route('admin.dashboard') }}" class="block px-3 py-2.5 rounded-xl text-base font-bold text-[#15965C] bg-[#EAFBF2] border border-[#20BF78]/40 flex items-center justify-between">
+                <span class="flex items-center gap-2">
+                    <span>🔐</span>
+                    <span>Admin Operations Console</span>
+                </span>
+                <span class="text-xs bg-[#20BF78] text-white px-2 py-0.5 rounded-full font-bold">Desk</span>
+            </a>
             <div class="pt-2 border-t border-[#E5EAE7] flex justify-between items-center">
                 <span class="text-xs text-[#444B48]">Language / ቋንቋ:</span>
                 <div class="flex items-center gap-2">
