@@ -38,7 +38,7 @@
                 <div class="text-xs uppercase font-extrabold text-[#15965C] tracking-wider mb-2">Step 2</div>
                 <h3 class="text-xl font-bold text-[#111111] mb-3">Save Daily</h3>
                 <p class="text-sm text-[#444B48] leading-relaxed">
-                    Make your daily contributions using Telebirr, M-PESA, CBE Birr, or Chapa. Watch your Consistency Score rise.
+                    Make your daily contributions using Telebirr, M-PESA, CBE Birr, or Chapa. Watch your Consistency Score rise with AI optimization.
                 </p>
             </div>
 

@@ -71,12 +71,12 @@
                 <div class="text-xs text-slate-300 mt-1 font-medium">Calculated Payout Accuracy</div>
             </div>
             <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center backdrop-blur-xs">
-                <div class="text-2xl sm:text-3xl font-extrabold text-[#20BF78]">ET UM 1170B1</div>
-                <div class="text-xs text-slate-300 mt-1 font-medium">Granted Patent (Ethiopia)</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-[#20BF78]">Advance Pay</div>
+                <div class="text-xs text-slate-300 mt-1 font-medium">Advanced payment gets you to your pot</div>
             </div>
             <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center backdrop-blur-xs">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white">INSA & NBE</div>
-                <div class="text-xs text-slate-300 mt-1 font-medium">Certified & Cleared</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-white">AI Consistency</div>
+                <div class="text-xs text-slate-300 mt-1 font-medium">Consistency score with AI</div>
             </div>
         </div>
     </div>
@@ -274,7 +274,7 @@
                 <div class="text-xs font-bold uppercase tracking-wider text-[#15965C] mb-2">Step 2</div>
                 <h3 class="text-xl font-bold text-[#111111] mb-3">Save Daily</h3>
                 <p class="text-sm text-[#444B48] leading-relaxed">
-                    Make your daily contributions using Telebirr, M-PESA, CBE Birr, or Chapa. Watch your Consistency Score rise.
+                    Make your daily contributions using Telebirr, M-PESA, CBE Birr, or Chapa. Watch your Consistency Score rise with AI optimization.
                 </p>
             </div>
 
