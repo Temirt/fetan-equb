@@ -39,20 +39,20 @@ function initHeroLineCanvas() {
 
         // Deep glowing ambient gradient
         const ambientGrad = ctx.createRadialGradient(width / 2, height / 2, 50, width / 2, height / 2, width / 1.5);
-        ambientGrad.addColorStop(0, 'rgba(16, 185, 129, 0.12)');
-        ambientGrad.addColorStop(0.5, 'rgba(6, 78, 59, 0.05)');
-        ambientGrad.addColorStop(1, 'rgba(2, 24, 13, 0)');
+        ambientGrad.addColorStop(0, 'rgba(32, 191, 120, 0.15)');
+        ambientGrad.addColorStop(0.5, 'rgba(21, 150, 92, 0.05)');
+        ambientGrad.addColorStop(1, 'rgba(17, 17, 17, 0)');
         ctx.fillStyle = ambientGrad;
         ctx.fillRect(0, 0, width, height);
 
         step += 0.02;
 
-        // Draw multiple glowing harmonic waves
-        drawWave(height / 2, 35, 0.005, step, 'rgba(250, 204, 21, 0.15)', 8);
-        drawWave(height / 2, 25, 0.008, step * 1.2 + 1, 'rgba(52, 211, 153, 0.25)', 5);
-        drawWave(height / 2, 18, 0.006, step * 0.8 + 2, 'rgba(255, 255, 255, 0.4)', 3);
-        // The core bright infinite glowing gold & white line
-        drawWave(height / 2, 12, 0.004, step * 1.5, 'rgba(254, 240, 138, 0.95)', 2, true);
+        // Draw multiple glowing harmonic emerald waves
+        drawWave(height / 2, 30, 0.005, step, 'rgba(32, 191, 120, 0.20)', 6);
+        drawWave(height / 2, 20, 0.007, step * 1.2 + 1, 'rgba(21, 150, 92, 0.35)', 4);
+        drawWave(height / 2, 14, 0.005, step * 0.8 + 2, 'rgba(234, 251, 242, 0.4)', 2);
+        // The core bright infinite glowing emerald & white line
+        drawWave(height / 2, 10, 0.003, step * 1.4, 'rgba(255, 255, 255, 0.95)', 2, true);
 
         // Render traveling light pulses / particles along the infinite line
         particles.forEach(p => {
@@ -60,13 +60,13 @@ function initHeroLineCanvas() {
             if (p.x > width) {
                 p.x = 0;
             }
-            const waveY = height / 2 + Math.sin(p.x * 0.004 + step * 1.5) * 12;
+            const waveY = height / 2 + Math.sin(p.x * 0.003 + step * 1.4) * 10;
 
             ctx.beginPath();
             ctx.arc(p.x, waveY, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(253, 224, 71, ${p.alpha})`;
-            ctx.shadowColor = '#facc15';
-            ctx.shadowBlur = 10;
+            ctx.fillStyle = `rgba(32, 191, 120, ${p.alpha})`;
+            ctx.shadowColor = '#20BF78';
+            ctx.shadowBlur = 12;
             ctx.fill();
         });
 
@@ -79,8 +79,8 @@ function initHeroLineCanvas() {
         ctx.lineWidth = lineWidth;
         ctx.strokeStyle = strokeColor;
         if (isCore) {
-            ctx.shadowColor = '#fef08a';
-            ctx.shadowBlur = 25;
+            ctx.shadowColor = '#20BF78';
+            ctx.shadowBlur = 20;
         }
 
         for (let x = 0; x <= width; x += 3) {
